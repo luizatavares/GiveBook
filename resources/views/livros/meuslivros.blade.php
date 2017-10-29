@@ -28,6 +28,8 @@
                                 <td>Nome</td>
                                 <td>Genero</td>
                                 <td>Descrição</td>
+                                <td></td>
+                                <td></td>
                             </thead>
                             <tbody>
                                 @foreach ($livros as $livro)
@@ -36,6 +38,12 @@
                                     <td>{{ $livro->nome }}</td>
                                     <td>{{ $livro->Genero->genero }}</td>
                                     <td>{{ $livro->descricao }}</td>
+                                    <td>
+                                        <a href="{{route('editalivro', ['id'=>$livro->id])}}"><span class="glyphicon glyphicon-pencil"></span></a> 
+                                    </td>
+                                    <td>
+                                        <a href="{{route('excluilivro', ['id'=>$livro->id])}}"><span class="glyphicon glyphicon-remove"></span></a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

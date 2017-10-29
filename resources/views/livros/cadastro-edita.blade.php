@@ -17,7 +17,7 @@
 
                 <div class="panel-body">
                     
-                    <form action="{{route('salvarlivro')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ isset($livro) ? route('gravarlivro') : route('salvarlivro')}}" method="post" enctype="multipart/form-data">
                       <div class="form-group"><label>
                             Nome: 
                         </label>
@@ -27,7 +27,7 @@
                      <div class="form-group"><label>
                            Descrição: 
                         </label>
-                        <textarea name = "descricao" rows = "5" class = "form-control" required></textarea>
+                        <textarea name = "descricao" rows = "5" class = "form-control" required>{{ isset($livro) ? $livro->descricao : ''}}</textarea>
                     </div>
 
 
@@ -37,7 +37,7 @@
                         <select name='idGenero' class="form-control" required>
                             <option value="">Selecione um gênero</option>
                         @foreach ($generos as $genero)
-                        <option value='{{$genero->id}}'>{{$genero->genero}}</option>
+                        <option value='{{$genero->id}}' {{ isset($livro) ?  $livro->idGenero == $genero->id ? 'selected' : '' : ''}} >{{$genero->genero}}</option>
                         @endforeach                            
                         </select>
                     </div>
@@ -45,7 +45,7 @@
                      <div class="form-group"><label>
                            Foto: 
                         </label>
-                        <input type="file" name="foto" required>
+                        <input type="file" name="foto">
                     </div>
 
 

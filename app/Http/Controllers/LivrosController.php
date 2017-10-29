@@ -65,6 +65,34 @@ class LivrosController extends Controller
             $imagem->move($destinationPath,$imagem->getClientOriginalName());
         }
         return redirect()->route('meuslivros');
+
     }
 
+    	public function editalivro($id){
+
+    		$livro= livros::find($id);
+    		$generos=generos::all();
+    		return view ('livros.cadastro-edita', ['generos'=>$generos,'livro'=>$livro]);
+
+    	}
+
+    	public function gravarlivro(Request $request){
+    		$livro=livros::find($request->id); 
+    		$livro->fill([
+    			'nome'=>$request->nome, 
+    			'descricao'=>$request->descricao,
+    			'idGenero'=>$request->idGenero
+
+    		]);
+    		$livro->save();
+    		return redirect()->route('meuslivros');
+    	}
+
+    	public function excluilivro($id){
+
+    		$livro=livros::find($id);
+    		$livro->delete();
+    		return redirect()->route('meuslivros');
+
+    	}
 }
