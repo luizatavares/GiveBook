@@ -57,6 +57,15 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                   
+                                    <li>
+                                        <a href="{{ route('meusdados') }}">Meus Dados</a>
+                                        
+
+                                    </li>
+
+
+
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

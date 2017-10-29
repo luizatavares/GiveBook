@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'painel', 'middleware'=>'auth'], function(){
+
+	Route::get('/meusdados', 'UsuariosController@meusdados')->name('meusdados');
+
+	Route::post('/salvardados', 'UsuariosController@salvardados')->name('salvardados');	
+
+});
