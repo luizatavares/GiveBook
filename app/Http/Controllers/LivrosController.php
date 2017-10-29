@@ -78,6 +78,40 @@ class LivrosController extends Controller
 
     	public function gravarlivro(Request $request){
     		$livro=livros::find($request->id); 
+
+			if ($request->foto != null ){
+    			$imagem = $request->file('foto');	
+
+    			if (unlink('imagens/fotos/'.$livro->id.'/'.$livro->foto)){
+    				$livro->foto = $imagem->getClientOriginalName();
+				    $livro->save();
+
+    				$input_data = $request->all();
+    				$validator = Validator::make(
+		            $input_data, [
+			            'imagem.*' => 'required|mimes:jpg,jpeg,png,bmp'
+			            ],[
+			                'imagem.*.required' => 'Please upload an image',
+			                'imagem.*.mimes' => 'Apenas extensões jpeg,png e bmp são permitidas',
+			            ]
+			        );
+
+			        if ($validator->fails()) {
+			            return response()->json(array(
+			                'success' => false,
+			                'errors' => $validator->getMessageBag()->toArray()
+
+			            ), 400);             
+			        }
+			        else{
+			            $destinationPath = 'imagens/fotos/'.$livro->id;
+			            $imagem->move($destinationPath,$imagem->getClientOriginalName());
+			        }
+    			}
+
+    		}
+
+    		
     		$livro->fill([
     			'nome'=>$request->nome, 
     			'descricao'=>$request->descricao,
