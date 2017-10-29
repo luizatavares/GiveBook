@@ -10,8 +10,7 @@ class UsuariosController extends Controller
 {
     public function meusdados()
     {
-    	$user = Auth::user();
-
+    	
     	return view('usuarios.meusdados', ['user'=>Auth::user()]);
 
     }

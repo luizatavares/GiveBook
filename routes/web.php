@@ -25,4 +25,9 @@ Route::group(['prefix' => 'painel', 'middleware'=>'auth'], function(){
 
 	Route::post('/salvardados', 'UsuariosController@salvardados')->name('salvardados');	
 
+	Route::group(['prefix' => 'livros'], function(){
+		Route::get('/meuslivros', 'LivrosController@meuslivros')->name('meuslivros');
+		Route::get('/cadastrarlivro', 'LivrosController@cadastrarlivro')->name('cadastrarlivro');
+	});
+
 });
