@@ -28,6 +28,9 @@ Route::group(['prefix' => 'painel', 'middleware'=>'auth'], function(){
 	Route::group(['prefix' => 'livros'], function(){
 		Route::get('/meuslivros', 'LivrosController@meuslivros')->name('meuslivros');
 		Route::get('/cadastrarlivro', 'LivrosController@cadastrarlivro')->name('cadastrarlivro');
+
+		Route::post('/salvarlivro','LivrosController@salvarlivro')->name('salvarlivro');
+
 	});
 
 });
