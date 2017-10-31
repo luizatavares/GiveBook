@@ -5,12 +5,14 @@
      <div class="row">
 
         <div class="col-lg-3">
-          <h1 class="my-4">Shop Name</h1>
+          <h1 class="my-4">Busca por gêneros</h1>
           <div class="list-group">
-            <a href="#" class="list-group-item">Category 1</a>
-            <a href="#" class="list-group-item">Category 2</a>
-            <a href="#" class="list-group-item">Category 3</a>
-            <a href="#" class="list-group-item">Category 4</a>
+            @foreach ($generos as $genero)
+                         
+            <a href="#" class="list-group-item">{{$genero->genero}}</a>
+
+            
+            @endforeach 
           </div>
         </div>
         <!-- /.col-lg-3 -->
