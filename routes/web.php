@@ -15,7 +15,8 @@
     return view('welcome');
 });*/
 Route::get('/', 'InicioController@inicio')->name('inicio');
-
+Route::get('/categorialivros/{id}', 'LivrosController@buscacategoria')->name('buscacategoria');
+Route::get('/visualizarlivro/{id}', 'LivrosController@visualizarlivro')->name('visualizarlivro');
 
 Auth::routes();
 

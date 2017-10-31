@@ -129,4 +129,34 @@ class LivrosController extends Controller
     		return redirect()->route('meuslivros');
 
     	}
+
+
+        public function buscacategoria($id){
+            //Busca no banco
+            $livros=livros::where('idGenero', '=', $id)->get();
+
+            $genero=generos::find($id);
+
+            //Acessa o arquivo da view
+            return view('livros.buscagenero', ['livros'=>$livros, 'genero'=>$genero]);
+
+
+        }
+
+        public function visualizarlivro($id){
+
+            $livros=livros::find($id);
+            return view('livros.visualizarlivro', ['livro'=>$livros]);
+
+
+        }
+
+
+
 }
+
+
+
+
+
+

@@ -9,7 +9,7 @@
           <div class="list-group">
             @foreach ($generos as $genero)
                          
-            <a href="#" class="list-group-item">{{$genero->genero}}</a>
+            <a href="{{route ('buscacategoria', ['id'=>$genero->id])}}" class="list-group-item">{{$genero->genero}}</a>
 
             
             @endforeach 

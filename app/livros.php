@@ -13,4 +13,8 @@ class livros extends Model
     public function Genero(){
     	return $this->belongsTo("App\generos", 'idGenero');
     }
+
+    public function Proprietario(){
+    	return $this->belongsTo("App\User", 'idUsuario');
+    }
 }
