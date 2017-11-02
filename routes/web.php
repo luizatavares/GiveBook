@@ -15,6 +15,7 @@
     return view('welcome');
 });*/
 Route::get('/', 'InicioController@inicio')->name('inicio');
+Route::get('/quemsomos', 'InicioController@quemsomos')->name('quemsomos');
 Route::get('/categorialivros/{id}', 'LivrosController@buscacategoria')->name('buscacategoria');
 Route::get('/visualizarlivro/{id}', 'LivrosController@visualizarlivro')->name('visualizarlivro');
 

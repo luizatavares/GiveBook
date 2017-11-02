@@ -16,5 +16,12 @@ return view('welcome', ['generos'=>$generos]);
 
 }
 
+public function quemsomos(){
+
+return view('quemsomos');
+
+
+
+}
 
 }
