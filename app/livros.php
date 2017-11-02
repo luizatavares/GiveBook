@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class livros extends Model
 {
 	protected $fillable = [
-        'nome', 'descricao', 'idGenero','idUsuario', 'foto'
+        'nome', 'descricao', 'idGenero','idUsuario', 'foto','imagem'
     ];
     
     public function Genero(){

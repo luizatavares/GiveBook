@@ -20,13 +20,13 @@
                     
                 
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table text-center">
                             <thead>
                                 <td>Código</td>
                                 <td>Nome</td>
                                 <td>Genero</td>
                                 <td>Descrição</td>
-                               
+                               <td>Imagem</td>
                             </thead>
                             <tbody>
                                 
@@ -35,6 +35,9 @@
                                     <td>{{ $livro->nome }}</td>
                                     <td>{{ $livro->Genero->genero }}</td>
                                     <td>{{ $livro->descricao }}</td>
+                                    <td>
+                                        <img class="img-responsive" src="{{ asset('imagens/fotos/'.$livro->id.'/'.$livro->foto) }}">
+                                    </td>
                                     
                                 </tr>
                              
