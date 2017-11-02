@@ -60,7 +60,14 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
+                            <div class="form-group">
+                          
+                            <label for="password-confirm" class="col-md-4 control-label"></label>
+                       
+                            <div class="col-md-6">
+                              <input type="checkbox" name="vehicle" value="Car" required > Eu aceito os <a href="{{asset('termosdeuso.pdf')}}" target="_blank">Termos de Uso</a>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
