@@ -81,6 +81,11 @@ class LivrosController extends Controller
 
 			if ($request->foto != null ){
     			$imagem = $request->file('foto');	
+                $imagem2 = $request->file('foto'); 
+                $fp= fopen($imagem2, 'rb');
+                $conteudo=fread($fp, $imagem2['size']);
+                $conteudo=addslashes($conteudo);  
+                fclose($fp);
 
     			if (unlink('imagens/fotos/'.$livro->id.'/'.$livro->foto)){
     				$livro->foto = $imagem->getClientOriginalName();
@@ -115,7 +120,8 @@ class LivrosController extends Controller
     		$livro->fill([
     			'nome'=>$request->nome, 
     			'descricao'=>$request->descricao,
-    			'idGenero'=>$request->idGenero
+    			'idGenero'=>$request->idGenero,
+                'imagem'=>$imagem2
 
     		]);
     		$livro->save();
