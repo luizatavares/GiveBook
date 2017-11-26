@@ -32,4 +32,23 @@ class UsuariosController extends Controller
     	return redirect()->route('meusdados');
     }
 
+    public function usuarios(){
+        $usuarios=User::all();
+        return view('usuarios.todosusuarios', ['usuarios'=>$usuarios]);
+
+    }
+
+    public function tipo($id,$tipo){
+
+        $user = User::find($id);
+        $user->fill([
+            'tipoUsuario'=>$tipo
+
+        ]);
+
+        $user->save();
+        return redirect()->route('usuarios');
+
+    }
+
 }
