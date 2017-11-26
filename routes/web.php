@@ -42,4 +42,20 @@ Route::group(['prefix' => 'painel', 'middleware'=>'auth'], function(){
 
 	});
 
+	Route::group([ 'middleware'=>'admin'], function(){
+		Route::group(['prefix' => 'generos'], function(){
+		Route::get('/', 'GenerosController@generos')->name('generos');
+		Route::get('/cadastrargenero', 'GenerosController@cadastrargenero')->name('cadastrargenero');
+
+		Route::post('/salvargenero','GenerosController@salvargenero')->name('salvargenero');
+
+		Route::get('/editargenero/{id}', 'GenerosController@editargenero')->name('editargenero');
+		Route::post('/gravargenero','GenerosController@gravargenero')->name('gravargenero');
+		Route::get('/excluirgenero/{id}', 'GenerosController@excluirgenero')->name('excluirgenero');
+
+
+});
+	});
+
+	
 });

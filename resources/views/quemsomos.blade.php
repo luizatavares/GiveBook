@@ -29,6 +29,7 @@ de doar conhecimento ao próximo. <br><br><br><br>
      <img src="luiza.jpg" class="img-circle" alt="Cinque Terre"  width="75%" height="75%">
      
     <p >Luiza Tavares</p>
+   
     
      </div> 
       <div class="col-md-3 text-center">

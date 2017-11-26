@@ -64,9 +64,28 @@
                                         
 
                                     </li>
+
                                  </ul>   
 
                             </li>
+                            @if(Auth::user()->tipoUsuario == 'admin')
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+
+                                    Gêneros <span class="caret"></span>
+                                </a>
+                                 <ul class="dropdown-menu" role="menu">
+                                   
+                                    <li>
+                                        <a href="{{ route('generos') }}">Gêneros</a>
+                                        
+
+                                    </li>
+                                    
+                                 </ul>   
+
+                            </li>
+                            @endif
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
