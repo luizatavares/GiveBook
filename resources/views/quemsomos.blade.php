@@ -23,12 +23,19 @@ de doar conhecimento ao próximo. <br><br><br><br>
   <p>
     Greyziele Cael
   </p>
+  <p>
+    Graduanda em Sistemas de Informação, é responsável pelas regras de negócio e documentação do projeto, além do desenvolvimento Front-end do site e auxílio na criação do banco de dados.
+  </p>
+
 
 </div>
      <div class="col-md-3 text-center">
      <img src="luiza.jpg" class="img-circle" alt="Cinque Terre"  width="75%" height="75%">
      
     <p >Luiza Tavares</p>
+    <p>
+    Graduanda em Sistemas de Informação, é responsável pelo desenvolvimento Back-end do site, documentação do projeto e criação do banco de dados.
+    </p>
    
     
      </div> 
@@ -37,12 +44,19 @@ de doar conhecimento ao próximo. <br><br><br><br>
       <p>
         Kaíque Gesus
       </p>  
+      <p>
+      Graduando em Sistemas de Informação, é responsável pela documentação do projeto e auxílio no desenvolvimento Front-end do site.
+      </p>
+
      </div> 
       <div class="col-md-3 text-center">
      <img src="ermelinda_foto.jpg" class="img-circle" alt="Cinque Terre"  width="75%" height="75%">
       <p>
         Ermelinda Abreu
-      </p>   
+      </p> 
+      <p>
+      Graduanda em Sistemas de Informação, é responsável pela documentação do projeto, desenvolvimento Front-end do site e auxílio na criação do banco de dados.
+      </p>  
      </div> 
 
      </div>
