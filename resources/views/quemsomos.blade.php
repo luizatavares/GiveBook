@@ -24,7 +24,7 @@ de doar conhecimento ao próximo. <br><br><br><br>
     Greyziele Cael
   </p>
   <p>
-    Graduanda em Sistemas de Informação, é responsável pelas regras de negócio e documentação do projeto, além do desenvolvimento Front-end do site e auxílio na criação do banco de dados.
+    Graduanda em Sistemas de Informação, é responsável pelas regras de negócio e auxílio na confecção da documentação do projeto.
   </p>
 
 
@@ -45,7 +45,7 @@ de doar conhecimento ao próximo. <br><br><br><br>
         Kaíque Gesus
       </p>  
       <p>
-      Graduando em Sistemas de Informação, é responsável pela documentação do projeto e auxílio no desenvolvimento Front-end do site.
+      Graduando em Sistemas de Informação, é responsável pelo auxílio na confecção da documentação do projeto.
       </p>
 
      </div> 
