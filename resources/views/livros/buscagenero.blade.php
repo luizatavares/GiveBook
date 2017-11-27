@@ -39,7 +39,7 @@
                                     <td>{{ $livro->Genero->genero }}</td>
                                     <td>{{ $livro->descricao }}</td>
                                     <td>
-                                        <a href="{{route('visualizarlivro', ['id'=>$livro->id])}}"><span class="glyphicon glyphicon-pencil"></span></a> 
+                                        <a href="{{route('visualizarlivro', ['id'=>$livro->id])}}"><span class="glyphicon glyphicon-eye-open"></span></a> 
                                     </td>
                                     
                                 </tr>
